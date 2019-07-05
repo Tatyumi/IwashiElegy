@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class TimeLimtController : MonoBehaviour
 {
+    /// <summary>決闘開始パネル</summary>
+    public GameObject DuelStartPanel;
     /// <summary>終了フラグ</summary>
     public static bool isEnd;
     /// <summary>制限時間</summary>
@@ -25,16 +27,9 @@ public class TimeLimtController : MonoBehaviour
     void Update()
     {
         // 終了フラグチェック
-        if (isEnd)
-        {
-            // trueの場合(終了)
-
-
-        }
-        else
+        if (!isEnd)
         {
             // falseの場合(終了していない)
-
 
             // 時間計測
             timeLimit -= Time.deltaTime;
@@ -58,6 +53,9 @@ public class TimeLimtController : MonoBehaviour
 
                 // SE再生
                 audioManager.PlaySE(audioManager.EndDrumSE.name);
+
+                // 表示
+                DuelStartPanel.SetActive(true);
             }
         }
     }
@@ -75,6 +73,9 @@ public class TimeLimtController : MonoBehaviour
         // TODOステージによって異なる
         timeLimit = 10.0f;
         isEnd = false;
+
+        // 非表示
+        DuelStartPanel.SetActive(false);
 
         // 時間取得
         timeLimitText.text = timeLimit.ToString();
