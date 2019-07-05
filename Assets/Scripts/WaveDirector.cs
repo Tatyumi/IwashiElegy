@@ -46,7 +46,7 @@ public class WaveDirector : MonoBehaviour
     /// 対象のリストが保持するオブジェクトを非活性状態にする
     /// </summary>
     /// <param name="gameObjectLists">ゲームオブジェクトリスト</param>
-    private void GameObjectListsActiveFalse(GameObject[] gameObjectLists)
+    public static void GameObjectListsActiveFalse(GameObject[] gameObjectLists)
     {
         foreach (var obj in gameObjectLists)
         {
@@ -59,13 +59,12 @@ public class WaveDirector : MonoBehaviour
     /// 指定した要素番号のオブジェクトを活性状態にする
     /// </summary>
     /// <param name="gameObjectLists">ゲームオブジェクトリスト</param>
-    /// <param name="num">番号</param>
-    private void GameObjectListsSpecifiedActive(GameObject[] gameObjectLists, int num)
+    public static void GameObjectListsSpecifiedActive(GameObject[] gameObjectLists)
     {
         for (int i = 0; i < gameObjectLists.Length; i++)
         {
             // 該当する番号はtrueとなる
-            gameObjectLists[i].SetActive(i == num);
+            gameObjectLists[i].SetActive(i == Phase);
         }
     }
 
@@ -83,7 +82,7 @@ public class WaveDirector : MonoBehaviour
         // 非表示
         Iwashi.SetActive(false);
         // 進捗に合うオブジェクトの表示
-        GameObjectListsSpecifiedActive(EnemyLists, Phase);
+        GameObjectListsSpecifiedActive(EnemyLists);
 
         yield return wait;
 
@@ -92,7 +91,7 @@ public class WaveDirector : MonoBehaviour
         // 表示
         AngryIwashi.SetActive(true);
         // 進捗に合うオブジェクトの表示
-        GameObjectListsSpecifiedActive(ClicheLists, Phase);
+        GameObjectListsSpecifiedActive(ClicheLists);
 
         yield return wait;
 
