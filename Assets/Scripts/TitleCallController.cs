@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Common;
 
 public sealed class TitleCallController : MonoBehaviour
 {
@@ -65,8 +66,8 @@ public sealed class TitleCallController : MonoBehaviour
         {
             // 経過した場合
 
-            // TODO シーン遷移処理
-            Debug.Log("しーんせんい");
+            // ウェーブシーンに遷移
+            SceneManager.LoadScene(SceneName.WAVE_SCENE);
         }
     }
 
