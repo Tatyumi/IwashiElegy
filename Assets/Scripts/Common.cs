@@ -7,7 +7,9 @@
         public const string TITLE_SCENE = "TitleScene";
         /// <summary>オープニングシーン名</summary>
         public const string OPENING_SCENE = "OpeningScene";
-        /// <summary>集会シーン</summary>
+        /// <summary>集会シーン名</summary>
         public const string GATHER_SCENE = "GatherScene";
+        /// <summary>ウェーブシーン名</summary>
+        public const string WAVE_SCENE = "WaveScene";
     }
 }
