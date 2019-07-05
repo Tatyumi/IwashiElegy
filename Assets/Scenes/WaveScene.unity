@@ -207,12 +207,12 @@ GameObject:
   - component: {fileID: 203933611}
   - component: {fileID: 203933610}
   m_Layer: 5
-  m_Name: Iwashi
+  m_Name: IwashiImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &203933609
 RectTransform:
   m_ObjectHideFlags: 0
