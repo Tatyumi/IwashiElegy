@@ -660,6 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4738e496e1cd5c479c933f53a83f562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DuelStartPanel: {fileID: 1554062591}
 --- !u!114 &1365977637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1067,8 +1068,9 @@ GameObject:
   - component: {fileID: 1554062592}
   - component: {fileID: 1554062594}
   - component: {fileID: 1554062593}
+  - component: {fileID: 1554062595}
   m_Layer: 5
-  m_Name: EndPanel
+  m_Name: DuelStartPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1131,6 +1133,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554062591}
   m_CullTransparentMesh: 0
+--- !u!114 &1554062595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554062591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27fc74959b3edb34683ad6fbdd2a23a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1695354490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,7 +1274,7 @@ MonoBehaviour:
   CatchIwashiSE: {fileID: 8300000, guid: 816dd3e2a5976ec4daf9630ab5f663db, type: 3}
   EndDrumSE: {fileID: 8300000, guid: 0e540b184b3c0344abc60c5ef9a6d812, type: 3}
   TitleSE: {fileID: 8300000, guid: f67e38602eded6c4c859cdea2344f844, type: 3}
-  TitleCallSE: {fileID: 0}
+  TitleCallSE: {fileID: 8300000, guid: 7ebcd99f4b9352f44b6f0271775f6bbd, type: 3}
 --- !u!4 &1695354493
 Transform:
   m_ObjectHideFlags: 0
