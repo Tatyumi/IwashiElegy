@@ -38,6 +38,9 @@ public sealed class TitleDirector : MonoBehaviour
         // 音楽データ取得
         audioManager = AudioManager.Instance;
 
+        // 進捗を初期化
+        WaveDirector.Phase = 0;
+
         // ジングル再生
         audioManager.PlaySE(audioManager.TitleSE.name);
     }
