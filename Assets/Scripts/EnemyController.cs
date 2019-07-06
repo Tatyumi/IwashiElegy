@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Common;
 
 public class EnemyController : MonoBehaviour
 {
@@ -9,21 +11,10 @@ public class EnemyController : MonoBehaviour
 
     public void Battle(int iwashiCount)
     {
-        // パワーとイワシの数を比較
-        if (EnemyData.Power > iwashiCount)
-        {
-            // パワーの方が多い場合
+        // 判定を取得
+        ResultDirector.isResult = iwashiCount > EnemyData.Power;
 
-            // TODO 敗北
-            Debug.Log("負け");
-        }
-        else
-        {
-            // イワシの方が多い場合
-
-            // TODO 勝利
-            Debug.Log("勝ち");
-        }
-
+        // 結果シーンに遷移
+        SceneManager.LoadScene(SceneName.RESULT_SCENE);
     }
 }
