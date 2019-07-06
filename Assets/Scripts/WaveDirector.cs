@@ -15,6 +15,8 @@ public class WaveDirector : MonoBehaviour
     public GameObject AngryIwashi;
     /// <summary>ガイドパネル</summary>
     public GameObject GuidePanel;
+    /// <summary>オーディオマネージャー</summary>
+    private AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -35,11 +37,13 @@ public class WaveDirector : MonoBehaviour
     private void Initialize()
     {
         // それぞれ活性状態を初期化
-        Iwashi.SetActive(true);
         AngryIwashi.SetActive(false);
         GuidePanel.SetActive(false);
         GameObjectsSwtichActive(EnemyLists, false);
         GameObjectsSwtichActive(ClicheLists, false);
+
+        // 音楽データ取得
+        audioManager = AudioManager.Instance;
     }
 
     /// <summary>
@@ -75,6 +79,12 @@ public class WaveDirector : MonoBehaviour
     /// <returns></returns>
     private IEnumerator StartSkit()
     {
+        // 表示
+        Iwashi.SetActive(true);
+
+        // 敵キャラに気づくSE再生
+        audioManager.PlaySE(audioManager.EnemyNoticeSE.name);
+
         // 待機時間
         var wait = new WaitForSeconds(2);
 
@@ -85,6 +95,9 @@ public class WaveDirector : MonoBehaviour
         // 進捗に合うオブジェクトの表示
         GameObjectListsSpecifiedActive(EnemyLists);
 
+        // 敵キャラ拡大SE再生
+        audioManager.PlaySE(audioManager.EnemyUpSE.name);
+
         yield return wait;
 
         // 非表示
@@ -93,6 +106,8 @@ public class WaveDirector : MonoBehaviour
         AngryIwashi.SetActive(true);
         // 進捗に合うオブジェクトの表示
         GameObjectListsSpecifiedActive(ClicheLists);
+        // 勢いSE再生
+        audioManager.PlaySE(audioManager.KiaiSE.name);
 
         yield return wait;
 
