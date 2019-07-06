@@ -11,7 +11,9 @@ public class DuelDirector : MonoBehaviour
     /// <summary>決闘開始テキスト</summary>
     public GameObject DuelStartText;
     /// <summary>開始x座標</summary>
-    private float StartPosX = 744;
+    private const float startPosX = 744;
+    /// <summary>オーディオマネージャー</summary>
+    private AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,9 @@ public class DuelDirector : MonoBehaviour
     /// </summary>
     private void Initialize()
     {
+        // 音楽データ取得
+        audioManager = AudioManager.Instance;
+
         // 非表示
         WaveDirector.GameObjectsSwtichActive(EnemyLists, false);
 
@@ -49,6 +54,9 @@ public class DuelDirector : MonoBehaviour
     /// </summary>
     private IEnumerator StartBattle()
     {
+        // SE再生
+        audioManager.PlaySE(audioManager.DuelSE.name);
+
         // 待機時間
         var wait = new WaitForSeconds(2);
 
