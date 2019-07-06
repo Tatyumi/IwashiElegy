@@ -29,6 +29,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip OpeningBGM;
     /// <summary>集会BGM</summary>
     public AudioClip GatherBGM;
+    /// <summary>エンディングBGM</summary>
+    public AudioClip EndingBGM;
     /// <summary>全SE保持ディクショナリ</summary>
     private Dictionary<string, AudioClip> SEDic;
     /// <summary>全BGM保持ディクショナリ</summary>
@@ -68,7 +70,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         BGMDic = new Dictionary<string, AudioClip>
         {
             { OpeningBGM.name, OpeningBGM },
-            { GatherBGM.name, GatherBGM }
+            { GatherBGM.name, GatherBGM },
+            { EndingBGM.name, EndingBGM }
         };
     }
 
