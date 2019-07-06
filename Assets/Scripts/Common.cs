@@ -15,5 +15,7 @@
         public const string DUEL_SCENE = "DuelScene";
         /// <summary>結果シーン名</summary>
         public const string RESULT_SCENE = "ResultScene";
+        /// <summary>エンディングシーン名</summary>
+        public const string ENDING_SCENE = "EndingScene";
     }
 }
