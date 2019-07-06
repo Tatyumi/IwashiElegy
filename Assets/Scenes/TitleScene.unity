@@ -687,9 +687,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CatchIwashiSE: {fileID: 8300000, guid: 816dd3e2a5976ec4daf9630ab5f663db, type: 3}
-  EndDrumSE: {fileID: 8300000, guid: 0e540b184b3c0344abc60c5ef9a6d812, type: 3}
+  EndDrumSE: {fileID: 8300000, guid: a9fa78b9ad115cb4dbda6b30d71d10c7, type: 3}
+  StartDrumSE: {fileID: 8300000, guid: 2a1bc1024b654d64bb2510fa0a18da78, type: 3}
   TitleSE: {fileID: 8300000, guid: f67e38602eded6c4c859cdea2344f844, type: 3}
   TitleCallSE: {fileID: 8300000, guid: 7ebcd99f4b9352f44b6f0271775f6bbd, type: 3}
+  EnemyNoticeSE: {fileID: 8300000, guid: e84d14123a47bf8478f677e0e3466696, type: 3}
+  EnemyUpSE: {fileID: 8300000, guid: 653678a01162ecb4ba6dc98c5beddd1e, type: 3}
+  KiaiSE: {fileID: 8300000, guid: d7a4444689306d04995fab00cd2a1554, type: 3}
+  DuelSE: {fileID: 8300000, guid: 25f69ecbce0c16345aa9143f832d1210, type: 3}
+  OpeningBGM: {fileID: 8300000, guid: 2cd8beed6527a3b4bb681315bb6ef83d, type: 3}
+  GatherBGM: {fileID: 8300000, guid: b40056b658f441a489f76f01621e2ecb, type: 3}
 --- !u!4 &1870646366
 Transform:
   m_ObjectHideFlags: 0
