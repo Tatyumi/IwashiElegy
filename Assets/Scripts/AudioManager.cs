@@ -7,10 +7,20 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip CatchIwashiSE;
     /// <summary>終了ドラムSE</summary>
     public AudioClip EndDrumSE;
+    /// <summary>開始ドラムSE</summary>
+    public AudioClip StartDrumSE;
     /// <summary>タイトルSE</summary>
     public AudioClip TitleSE;
     /// <summary>タイトルコールSE</summary>
     public AudioClip TitleCallSE;
+    /// <summary>敵キャラ発見SE </summary>
+    public AudioClip EnemyNoticeSE;
+    /// <summary>敵キャラ拡大SE</summary>
+    public AudioClip EnemyUpSE;
+    /// <summary>気合SE </summary>
+    public AudioClip KiaiSE;
+    /// <summary>決闘SE</summary>
+    public AudioClip DuelSE;
     /// <summary>オープニングBGM</summary>
     public AudioClip OpeningBGM;
     /// <summary>集会BGM</summary>
@@ -39,7 +49,12 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         {
             { CatchIwashiSE.name, CatchIwashiSE },
             { EndDrumSE.name, EndDrumSE },
+            { StartDrumSE.name, StartDrumSE },
             { TitleSE.name, TitleSE },
+            { EnemyNoticeSE.name, EnemyNoticeSE },
+            { EnemyUpSE.name, EnemyUpSE },
+            { KiaiSE.name, KiaiSE },
+            { DuelSE.name, DuelSE },
             { TitleCallSE.name, TitleCallSE }
         };
 
