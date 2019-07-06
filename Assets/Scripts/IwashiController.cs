@@ -3,7 +3,7 @@
 public class IwashiController : MonoBehaviour, IApplableScore
 {
     /// <summary>移動速度</summary>
-    private Vector2 moveSpeed = new Vector2(-3, 0);
+    private Vector2 moveSpeed = new Vector2(-4, 0);
     /// <summary>オーディオマネージャー</summary>
     private AudioManager audioManager;
     /// <summary>最大移動x座標</summary>
