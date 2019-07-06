@@ -5,7 +5,7 @@ public sealed class IntroductionController : MonoBehaviour
     /// <summary>タイトル画像</summary>
     public GameObject TitleImage;
     /// <summary>テキストのスクロールスピード</summary>
-    private const float textScrollSpeed = 55.0f;
+    private const float textScrollSpeed = 50.0f;
     /// <summary>制限座標</summary>
     private const float limitPosition = 663.0f;
     /// <summary>終了フラグ</summary>
