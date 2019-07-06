@@ -15,7 +15,9 @@ public class EndRollTextController : MonoBehaviour
     /// <summary>経過時間</summary>
     private float delta = 0.0f;
     /// <summary>待機時間</summary>
-    private float waitTime = 5.0f;
+    private float waitTime = 9.0f;
+    /// <summary>オーディオマネージャー</summary>
+    private AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,9 @@ public class EndRollTextController : MonoBehaviour
             if(delta > waitTime)
             {
                 // 経過した場合
+
+                // 音を停止
+                audioManager.StopSound();
 
                 // タイトルシーンに遷移
                 SceneManager.LoadScene(SceneName.TITLE_SCENE);
@@ -76,5 +81,8 @@ public class EndRollTextController : MonoBehaviour
 
         // 初期化
         delta = 0.0f;
+
+        // 音楽データ取得
+        audioManager = AudioManager.Instance;
     }
 }
