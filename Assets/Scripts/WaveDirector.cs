@@ -5,6 +5,8 @@ public class WaveDirector : MonoBehaviour
 {
     /// <summary>進捗</summary>
     public static int Phase = 0;
+    /// <summary>最大進捗</summary>
+    public static int MaxPhase = 2;
     /// <summary>敵のリスト</summary>
     public GameObject[] EnemyLists;
     /// <summary>決まり文句リスト</summary>
