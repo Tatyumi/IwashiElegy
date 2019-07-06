@@ -74,8 +74,19 @@ public class ResultDirector : MonoBehaviour
             // ゲーム進行
             WaveDirector.Phase++;
 
-            // ウェーブシーンに遷移
-            SceneManager.LoadScene(SceneName.WAVE_SCENE);
+            // 最後までゲームが進んだか判別
+            if (WaveDirector.Phase > WaveDirector.MaxPhase)
+            {
+                // 進んでいる場合
+
+                // Endingシーンに遷移
+                SceneManager.LoadScene(SceneName.ENDING_SCENE);
+            }
+            else
+            {
+                // ウェーブシーンに遷移
+                SceneManager.LoadScene(SceneName.WAVE_SCENE);
+            }
         }
         else
         {
