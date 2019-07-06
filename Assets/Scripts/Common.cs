@@ -11,5 +11,7 @@
         public const string GATHER_SCENE = "GatherScene";
         /// <summary>ウェーブシーン名</summary>
         public const string WAVE_SCENE = "WaveScene";
+        /// <summary>決闘シーン名</summary>
+        public const string DUEL_SCENE = "DuelScene";
     }
 }
