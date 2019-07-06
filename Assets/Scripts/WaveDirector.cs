@@ -38,20 +38,21 @@ public class WaveDirector : MonoBehaviour
         Iwashi.SetActive(true);
         AngryIwashi.SetActive(false);
         GuidePanel.SetActive(false);
-        GameObjectListsActiveFalse(EnemyLists);
-        GameObjectListsActiveFalse(ClicheLists);
+        GameObjectsSwtichActive(EnemyLists, false);
+        GameObjectsSwtichActive(ClicheLists, false);
     }
 
     /// <summary>
-    /// 対象のリストが保持するオブジェクトを非活性状態にする
+    /// ゲームオブジェクトの配列の活性状態を切り替える
     /// </summary>
-    /// <param name="gameObjectLists">ゲームオブジェクトリスト</param>
-    public static void GameObjectListsActiveFalse(GameObject[] gameObjectLists)
+    /// <param name="gameObjects">ゲームオブジェクト配列</param>
+    /// <param name="activeFlag">活性状態</param>
+    public static void GameObjectsSwtichActive(GameObject[] gameObjects, bool activeFlag)
     {
-        foreach (var obj in gameObjectLists)
+        foreach (var obj in gameObjects)
         {
             // 非活性にする
-            obj.SetActive(false);
+            obj.SetActive(activeFlag);
         }
     }
 
@@ -87,7 +88,7 @@ public class WaveDirector : MonoBehaviour
         yield return wait;
 
         // 非表示
-        GameObjectListsActiveFalse(EnemyLists);
+        GameObjectsSwtichActive(EnemyLists, false);
         // 表示
         AngryIwashi.SetActive(true);
         // 進捗に合うオブジェクトの表示
