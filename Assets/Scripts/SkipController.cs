@@ -7,6 +7,13 @@ public class SkipController : MonoBehaviour
     /// <summary>オーディオマネージャー</summary>
     private AudioManager audioManager;
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        // 初期化
+        Initialize();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -21,5 +28,14 @@ public class SkipController : MonoBehaviour
             // 集会シーンに遷移
             SceneManager.LoadScene(SceneName.GATHER_SCENE);
         }
+    }
+
+    /// <summary>
+    /// 初期化処理
+    /// </summary>
+    private void Initialize()
+    {
+        // 音楽データ取得
+        audioManager = AudioManager.Instance;
     }
 }
