@@ -21,6 +21,10 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip KiaiSE;
     /// <summary>決闘SE</summary>
     public AudioClip DuelSE;
+    /// <summary>勝利SE</summary>
+    public AudioClip WinSE;
+    /// <summary>敗北SE</summary>
+    public AudioClip LoseSE;
     /// <summary>オープニングBGM</summary>
     public AudioClip OpeningBGM;
     /// <summary>集会BGM</summary>
@@ -55,6 +59,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             { EnemyUpSE.name, EnemyUpSE },
             { KiaiSE.name, KiaiSE },
             { DuelSE.name, DuelSE },
+            { WinSE.name, WinSE },
+            { LoseSE.name, LoseSE },
             { TitleCallSE.name, TitleCallSE }
         };
 
