@@ -61,7 +61,6 @@ public class DuelDirector : MonoBehaviour
         WaveDirector.GameObjectListsSpecifiedActive(EnemyLists);
 
         // 指定の位置に配置
-        AngryIwashiLists.localPosition = new Vector2(StartPosX, AngryIwashiLists.localPosition.y);
-
+        AngryIwashiLists.localPosition = new Vector2(startPosX, AngryIwashiLists.localPosition.y);
     }
 }
