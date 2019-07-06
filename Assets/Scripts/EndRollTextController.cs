@@ -7,7 +7,7 @@ using Common;
 public class EndRollTextController : MonoBehaviour
 {
     /// <summary>テキストのスクロールスピード</summary>
-    private const float textScrollSpeed = 50.0f;
+    private const float textScrollSpeed = 30.0f;
     /// <summary>制限座標</summary>
     private const float limitPosition = 454.0f;
     /// <summary>終了フラグ</summary>
