@@ -7,7 +7,7 @@ public class GatherDirector : MonoBehaviour
     /// <summary>全てのゲームオブジェクト</summary>
     public GameObject[] AllGameObjects;
     /// <summary>スタートカンバスオブジェクト</summary>
-    public GameObject StartCanvas;
+    public GameObject GatherStartPanel;
     /// <summary>目標時間</summary>
     private const float targetTime = 3.0f;
     /// <summary>オーディオマネージャー</summary>
@@ -35,7 +35,7 @@ public class GatherDirector : MonoBehaviour
         WaveDirector.GameObjectsSwtichActive(AllGameObjects, false);
 
         // 表示
-        StartCanvas.SetActive(true);
+        GatherStartPanel.SetActive(true);
 
         // 音楽データ取得
         audioManager = AudioManager.Instance;
@@ -59,6 +59,6 @@ public class GatherDirector : MonoBehaviour
         WaveDirector.GameObjectsSwtichActive(AllGameObjects, true);
 
         // 非表示
-        StartCanvas.SetActive(false);
+        GatherStartPanel.SetActive(false);
     }
 }
