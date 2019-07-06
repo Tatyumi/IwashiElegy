@@ -12,7 +12,7 @@ public class GatherStartPanelController : MonoBehaviour
     private const float targetTime = 3.0f;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         // 初期化処理
         Initialize();
