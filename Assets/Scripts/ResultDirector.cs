@@ -12,6 +12,10 @@ public class ResultDirector : MonoBehaviour
     public GameObject LoseText;
     /// <summary>コンティニューパネル</summary>
     public GameObject ContinuePanel;
+    /// <summary>勝利時の背景</summary>
+    public GameObject WinBackGround;
+    /// <summary>敗北時の背景</summary>
+    public GameObject LoseBackGround;
     /// <summary>敗北した場合の敵キャラリスト</summary>
     public GameObject[] LoseEnemyLists;
     /// <summary>結果フラグ</summary>
@@ -41,6 +45,8 @@ public class ResultDirector : MonoBehaviour
         WinText.SetActive(false);
         LoseText.SetActive(false);
         ContinuePanel.SetActive(false);
+        WinBackGround.SetActive(false);
+        LoseBackGround.SetActive(false);
 
         // 音楽データ取得
         audioManager = AudioManager.Instance;
@@ -65,6 +71,9 @@ public class ResultDirector : MonoBehaviour
 
             // 勝利テキストの表示
             WinText.SetActive(true);
+
+            // 背景表示
+            WinBackGround.SetActive(true);
 
             // SE再生
             audioManager.PlaySE(audioManager.WinSE.name);
@@ -94,6 +103,9 @@ public class ResultDirector : MonoBehaviour
 
             // 敗北テキストの表示
             LoseText.SetActive(true);
+
+            // 背景表示
+            LoseBackGround.SetActive(true);
 
             // 進捗にあった敵キャラの表示
             WaveDirector.GameObjectListsSpecifiedActive(LoseEnemyLists);
