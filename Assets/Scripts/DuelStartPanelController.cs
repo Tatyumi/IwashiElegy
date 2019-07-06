@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using Common;
 
@@ -28,9 +26,8 @@ public class DuelStartPanelController : MonoBehaviour
         {
             // 一定時間経った場合
 
-            // TODO シーン遷移
-
-
+            // 決闘シーンに遷移
+            SceneManager.LoadScene(SceneName.DUEL_SCENE);
         }
     }
 
