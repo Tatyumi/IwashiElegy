@@ -66,6 +66,9 @@ public sealed class TitleCallController : MonoBehaviour
         {
             // 経過した場合
 
+            // 音停止
+            audioManager.StopSound();
+
             // ウェーブシーンに遷移
             SceneManager.LoadScene(SceneName.WAVE_SCENE);
         }
