@@ -13,5 +13,7 @@
         public const string WAVE_SCENE = "WaveScene";
         /// <summary>決闘シーン名</summary>
         public const string DUEL_SCENE = "DuelScene";
+        /// <summary>結果シーン名</summary>
+        public const string RESULT_SCENE = "ResultScene";
     }
 }
