@@ -16,6 +16,8 @@ public class ResultDirector : MonoBehaviour
     public GameObject WinBackGround;
     /// <summary>敗北時の背景</summary>
     public GameObject LoseBackGround;
+    /// <summary>勝利した場合の敵キャラリスト</summary>
+    public GameObject[] WinEnemyLists;
     /// <summary>敗北した場合の敵キャラリスト</summary>
     public GameObject[] LoseEnemyLists;
     /// <summary>結果フラグ</summary>
@@ -71,6 +73,9 @@ public class ResultDirector : MonoBehaviour
 
             // 勝利テキストの表示
             WinText.SetActive(true);
+
+            // 進捗にあった敵キャラの表示
+            WaveDirector.GameObjectListsSpecifiedActive(WinEnemyLists);
 
             // 背景表示
             WinBackGround.SetActive(true);
