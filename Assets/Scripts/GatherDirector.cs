@@ -44,7 +44,8 @@ public class GatherDirector : MonoBehaviour
 
     private IEnumerator StartGame()
     {
-        // TODO 開始SE
+        // 開始SE
+        audioManager.PlaySE(audioManager.StartDrumSE.name);
 
         // 待機時間
         var wait = new WaitForSeconds(2);
