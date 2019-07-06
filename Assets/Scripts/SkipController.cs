@@ -25,8 +25,8 @@ public class SkipController : MonoBehaviour
             // 音停止
             audioManager.StopSound();
 
-            // 集会シーンに遷移
-            SceneManager.LoadScene(SceneName.GATHER_SCENE);
+            // ウェーブシーンに遷移
+            SceneManager.LoadScene(SceneName.WAVE_SCENE);
         }
     }
 
