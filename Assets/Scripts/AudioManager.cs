@@ -11,8 +11,14 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip TitleSE;
     /// <summary>タイトルコールSE</summary>
     public AudioClip TitleCallSE;
+    /// <summary>オープニングBGM</summary>
+    public AudioClip OpeningBGM;
+    /// <summary>集会BGM</summary>
+    public AudioClip GatherBGM;
     /// <summary>全SE保持ディクショナリ</summary>
     private Dictionary<string, AudioClip> SEDic;
+    /// <summary>全BGM保持ディクショナリ</summary>
+    private Dictionary<string, AudioClip> BGMDic;
     /// <summary>オーディオソース</summary>
     AudioSource audioSource;
 
@@ -36,6 +42,34 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             { TitleSE.name, TitleSE },
             { TitleCallSE.name, TitleCallSE }
         };
+
+        // BGMを格納
+        BGMDic = new Dictionary<string, AudioClip>
+        {
+            { OpeningBGM.name, OpeningBGM },
+            { GatherBGM.name, GatherBGM }
+        };
+    }
+
+    /// <summary>
+    /// BGMの再生
+    /// </summary>
+    /// <param name="BGMName">BGMの名前</param>
+    public void PlayBGM(string BGMName)
+    {
+        // 名前の存在チェック
+        if (!BGMDic.ContainsKey(BGMName))
+        {
+            // 該当しない場合
+
+            // ログを表示
+            Debug.Log(BGMName + "という名前のBGMがありません");
+            return;
+        }
+
+        // BGMの再生
+        audioSource.clip = BGMDic[BGMName] as AudioClip;
+        audioSource.Play();
     }
 
     /// <summary>
