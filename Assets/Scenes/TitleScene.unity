@@ -695,6 +695,8 @@ MonoBehaviour:
   EnemyUpSE: {fileID: 8300000, guid: 653678a01162ecb4ba6dc98c5beddd1e, type: 3}
   KiaiSE: {fileID: 8300000, guid: d7a4444689306d04995fab00cd2a1554, type: 3}
   DuelSE: {fileID: 8300000, guid: 25f69ecbce0c16345aa9143f832d1210, type: 3}
+  WinSE: {fileID: 8300000, guid: 7f395c49d7de6e94d925ea6cc2b6bf46, type: 3}
+  LoseSE: {fileID: 8300000, guid: 7eff1c45f04358c4580aef8780c0728b, type: 3}
   OpeningBGM: {fileID: 8300000, guid: 2cd8beed6527a3b4bb681315bb6ef83d, type: 3}
   GatherBGM: {fileID: 8300000, guid: b40056b658f441a489f76f01621e2ecb, type: 3}
 --- !u!4 &1870646366
