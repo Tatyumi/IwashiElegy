@@ -32,7 +32,7 @@ public class DuelDirector : MonoBehaviour
     private void Initialize()
     {
         // 非表示
-        WaveDirector.GameObjectsSwtichActive(EnemyLists);
+        WaveDirector.GameObjectsSwtichActive(EnemyLists, false);
 
         for (int i = 1; i < AngryIwashiLists.childCount; i++)
         {
