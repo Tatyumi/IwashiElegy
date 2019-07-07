@@ -120,6 +120,39 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1953952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1953953}
+  m_Layer: 0
+  m_Name: UpGenerators
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1953953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953952}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 457, y: 595, z: -1602}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 186807418}
+  - {fileID: 2025121149}
+  - {fileID: 118667862}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &64356437
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,6 +197,100 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GeneratData: {fileID: 11400000, guid: 4d4376ff576bd0541a67daa4e10026eb, type: 2}
+  Canvas: {fileID: 1520067187}
+  IwashiPrefab: {fileID: 7638836633222269567, guid: 561ff63326f79c943b47adb4e3789d10,
+    type: 3}
+--- !u!1 &118667861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 118667862}
+  - component: {fileID: 118667863}
+  m_Layer: 0
+  m_Name: UpLeftIwashiGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &118667862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118667861}
+  m_LocalRotation: {x: 0.8433915, y: 0.53729963, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1953953}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 115}
+--- !u!114 &118667863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118667861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0e728a0988f9d4daf3cf14981d178f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GeneratData: {fileID: 11400000, guid: e69c7db708d3fe6448ad5647e6c8cd0b, type: 2}
+  Canvas: {fileID: 1520067187}
+  IwashiPrefab: {fileID: 7638836633222269567, guid: 561ff63326f79c943b47adb4e3789d10,
+    type: 3}
+--- !u!1 &186807417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 186807418}
+  - component: {fileID: 186807419}
+  m_Layer: 0
+  m_Name: UpIwashiGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &186807418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186807417}
+  m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1953953}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
+--- !u!114 &186807419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186807417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0e728a0988f9d4daf3cf14981d178f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GeneratData: {fileID: 11400000, guid: e69c7db708d3fe6448ad5647e6c8cd0b, type: 2}
   Canvas: {fileID: 1520067187}
   IwashiPrefab: {fileID: 7638836633222269567, guid: 561ff63326f79c943b47adb4e3789d10,
     type: 3}
@@ -773,10 +900,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 989064354}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e196d1abd9a5bbb4496a33ca4b87e6ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b0130560684e8f4c80a9f2c58e60b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GeneratData: {fileID: 11400000, guid: 4d4376ff576bd0541a67daa4e10026eb, type: 2}
+  GeneratData: {fileID: 11400000, guid: d79020af0ca62174a9dc35ecc48c4311, type: 2}
   Canvas: {fileID: 1520067187}
   IwashiPrefab: {fileID: 7638836633222269567, guid: 561ff63326f79c943b47adb4e3789d10,
     type: 3}
@@ -820,10 +947,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1004024854}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e196d1abd9a5bbb4496a33ca4b87e6ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b0130560684e8f4c80a9f2c58e60b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GeneratData: {fileID: 11400000, guid: 4d4376ff576bd0541a67daa4e10026eb, type: 2}
+  GeneratData: {fileID: 11400000, guid: d79020af0ca62174a9dc35ecc48c4311, type: 2}
   Canvas: {fileID: 1520067187}
   IwashiPrefab: {fileID: 7638836633222269567, guid: 561ff63326f79c943b47adb4e3789d10,
     type: 3}
@@ -965,7 +1092,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1316581774
 GameObject:
@@ -1626,10 +1753,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1561408255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e196d1abd9a5bbb4496a33ca4b87e6ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b0130560684e8f4c80a9f2c58e60b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GeneratData: {fileID: 11400000, guid: 4d4376ff576bd0541a67daa4e10026eb, type: 2}
+  GeneratData: {fileID: 11400000, guid: d79020af0ca62174a9dc35ecc48c4311, type: 2}
   Canvas: {fileID: 1520067187}
   IwashiPrefab: {fileID: 7638836633222269567, guid: 561ff63326f79c943b47adb4e3789d10,
     type: 3}
@@ -1778,6 +1905,7 @@ MonoBehaviour:
   - {fileID: 1532947449}
   - {fileID: 967590957}
   - {fileID: 1342901325}
+  - {fileID: 1953952}
   GatherStartPanel: {fileID: 1750688081}
 --- !u!4 &1830804753
 Transform:
@@ -1791,7 +1919,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1853935330
 GameObject:
@@ -1837,6 +1965,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GeneratData: {fileID: 11400000, guid: d66aa65f007a6254ca4907b6268fd119, type: 2}
+  Canvas: {fileID: 1520067187}
+  IwashiPrefab: {fileID: 7638836633222269567, guid: 561ff63326f79c943b47adb4e3789d10,
+    type: 3}
+--- !u!1 &2025121148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2025121149}
+  - component: {fileID: 2025121150}
+  m_Layer: 0
+  m_Name: UpRightIwashiGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2025121149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025121148}
+  m_LocalRotation: {x: 0.60876137, y: 0.7933534, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1953953}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 75}
+--- !u!114 &2025121150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025121148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0e728a0988f9d4daf3cf14981d178f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GeneratData: {fileID: 11400000, guid: e69c7db708d3fe6448ad5647e6c8cd0b, type: 2}
   Canvas: {fileID: 1520067187}
   IwashiPrefab: {fileID: 7638836633222269567, guid: 561ff63326f79c943b47adb4e3789d10,
     type: 3}
