@@ -77,4 +77,23 @@ public class IwashiMeterController : MonoBehaviour
 
         LevelUp();
     }
+
+    /// <summary>
+    /// メーター減算処理
+    /// </summary>
+    /// <param name="value">値</param>
+    public void SubtractMeter(float value)
+    {
+        // メーターを減産する
+        iwashiMeter.fillAmount -= value;
+
+        // メーターが0.0f以下か判別
+        if (iwashiMeter.fillAmount < 0.0f)
+        {
+            // 0.0f以下の場合
+
+            //　0.0fを代入する
+            iwashiMeter.fillAmount = 0.0f;
+        }
+    }
 }
