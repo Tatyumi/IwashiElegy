@@ -697,6 +697,7 @@ MonoBehaviour:
   DuelSE: {fileID: 8300000, guid: 25f69ecbce0c16345aa9143f832d1210, type: 3}
   WinSE: {fileID: 8300000, guid: 7f395c49d7de6e94d925ea6cc2b6bf46, type: 3}
   LoseSE: {fileID: 8300000, guid: 7eff1c45f04358c4580aef8780c0728b, type: 3}
+  LevelUpSE: {fileID: 8300000, guid: 3592a9a033cd5c04392d0d30cfcee390, type: 3}
   OpeningBGM: {fileID: 8300000, guid: 2cd8beed6527a3b4bb681315bb6ef83d, type: 3}
   GatherBGM: {fileID: 8300000, guid: b40056b658f441a489f76f01621e2ecb, type: 3}
   EndingBGM: {fileID: 8300000, guid: 65bbb8d2e88296a45b18c1afc6039491, type: 3}
