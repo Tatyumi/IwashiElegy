@@ -1,10 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class IwashiMeterController : MonoBehaviour
 {
+    /// <summary>ボーナスナンバーオブジェクト</summary>
+    public GameObject BonusNumber;
+    /// <summary>ボーナスナンバーテキスト</summary>
+    private Text bonusNumberText;
     /// <summary>いわしメーター</summary>
     private Image iwashiMeter;
     /// <summary>レベル</summary>
@@ -30,6 +32,7 @@ public class IwashiMeterController : MonoBehaviour
     {
         // コンポーネント取得
         iwashiMeter = gameObject.GetComponent<Image>();
+        bonusNumberText = BonusNumber.GetComponent<Text>();
 
         // 音楽データ取得
         audioManager = AudioManager.Instance;
@@ -37,6 +40,7 @@ public class IwashiMeterController : MonoBehaviour
         // 初期値代入
         iwashiMeter.fillAmount = 0.0f;
         level = 1;
+        bonusNumberText.text = level.ToString();
     }
 
     /// <summary>
@@ -57,6 +61,9 @@ public class IwashiMeterController : MonoBehaviour
 
                 // 加算
                 level++;
+
+                // テキスト表示変更
+                bonusNumberText.text = level.ToString();
 
                 // メーターに初期値代入
                 iwashiMeter.fillAmount = 0.0f;
