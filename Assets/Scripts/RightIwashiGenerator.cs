@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class RightIwashiGenerator :IwashiGenerator
+public class RightIwashiGenerator :HorizonIwashiGenerator
 {
     /// <summary>
     /// 初期化処理
