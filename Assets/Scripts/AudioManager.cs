@@ -27,6 +27,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip LoseSE;
     /// <summary>レベルアップSE</summary>
     public AudioClip LevelUpSE;
+    /// <summary>ダメージSE</summary>
+    public AudioClip DamageSE;
     /// <summary>オープニングBGM</summary>
     public AudioClip OpeningBGM;
     /// <summary>集会BGM</summary>
@@ -66,6 +68,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             { WinSE.name, WinSE },
             { LoseSE.name, LoseSE },
             { LevelUpSE.name, LevelUpSE },
+            { DamageSE.name, DamageSE },
             { TitleCallSE.name, TitleCallSE }
         };
 
