@@ -66,7 +66,7 @@ public class DuelDirector : MonoBehaviour
         DuelStartText.SetActive(false);
 
         // 進捗に適した敵を表示する
-        WaveDirector.GameObjectListsSpecifiedActive(EnemyLists);
+        WaveDirector.GameObjecsSpecifiedActive(EnemyLists);
 
         // 指定の位置に配置
         AngryIwashiLists.localPosition = new Vector2(startPosX, AngryIwashiLists.localPosition.y);

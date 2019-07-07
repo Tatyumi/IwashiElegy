@@ -75,7 +75,7 @@ public class ResultDirector : MonoBehaviour
             WinText.SetActive(true);
 
             // 進捗にあった敵キャラの表示
-            WaveDirector.GameObjectListsSpecifiedActive(WinEnemyLists);
+            WaveDirector.GameObjecsSpecifiedActive(WinEnemyLists);
 
             // 背景表示
             WinBackGround.SetActive(true);
@@ -113,7 +113,7 @@ public class ResultDirector : MonoBehaviour
             LoseBackGround.SetActive(true);
 
             // 進捗にあった敵キャラの表示
-            WaveDirector.GameObjectListsSpecifiedActive(LoseEnemyLists);
+            WaveDirector.GameObjecsSpecifiedActive(LoseEnemyLists);
 
             // SE再生
             audioManager.PlaySE(audioManager.LoseSE.name);

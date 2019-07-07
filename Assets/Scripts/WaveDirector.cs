@@ -66,20 +66,37 @@ public class WaveDirector : MonoBehaviour
     /// 指定した要素番号のオブジェクトを活性状態にする
     /// </summary>
     /// <param name="gameObjectLists">ゲームオブジェクトリスト</param>
-    public static void GameObjectListsSpecifiedActive(GameObject[] gameObjectLists)
+    public static void GameObjecsSpecifiedActive(GameObject[] gameObjectLists)
     {
         for (int i = 0; i < gameObjectLists.Length; i++)
         {
-            // 該当する番号はtrueとなる
+            // 該当する番号はtrue
             gameObjectLists[i].SetActive(i == Phase);
         }
     }
 
     /// <summary>
-    /// 寸劇コルーチン
+    /// ゲーム進捗に合わせたオブジェクトを表示する
     /// </summary>
-    /// <returns></returns>
-    private IEnumerator StartSkit()
+    /// <param name="gameObjectLists"></param>
+    public static void GameObjectsPhaseActive(GameObject[] gameObjectLists)
+    {
+        // 進捗に応じた数値
+        var n = gameObjectLists.Length - (MaxPhase - Phase);
+
+        for (int i = 0; i < n; i++)
+        {
+            // 表示
+            gameObjectLists[i].SetActive(true);
+        }
+    }
+
+
+/// <summary>
+/// 寸劇コルーチン
+/// </summary>
+/// <returns></returns>
+private IEnumerator StartSkit()
     {
         // 表示
         Iwashi.SetActive(true);
@@ -95,7 +112,7 @@ public class WaveDirector : MonoBehaviour
         // 非表示
         Iwashi.SetActive(false);
         // 進捗に合うオブジェクトの表示
-        GameObjectListsSpecifiedActive(EnemyLists);
+        GameObjecsSpecifiedActive(EnemyLists);
 
         // 敵キャラ拡大SE再生
         audioManager.PlaySE(audioManager.EnemyUpSE.name);
@@ -107,7 +124,7 @@ public class WaveDirector : MonoBehaviour
         // 表示
         AngryIwashi.SetActive(true);
         // 進捗に合うオブジェクトの表示
-        GameObjectListsSpecifiedActive(ClicheLists);
+        GameObjecsSpecifiedActive(ClicheLists);
         // 勢いSE再生
         audioManager.PlaySE(audioManager.KiaiSE.name);
 
