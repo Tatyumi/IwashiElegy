@@ -57,7 +57,7 @@ public class WaveDirector : MonoBehaviour
     {
         foreach (var obj in gameObjects)
         {
-            // 非活性にする
+            // 非活性
             obj.SetActive(activeFlag);
         }
     }
