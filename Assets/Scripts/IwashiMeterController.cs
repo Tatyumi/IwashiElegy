@@ -23,12 +23,6 @@ public class IwashiMeterController : MonoBehaviour
         Initialize();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     /// <summary>
     /// 初期化処理
     /// </summary>
