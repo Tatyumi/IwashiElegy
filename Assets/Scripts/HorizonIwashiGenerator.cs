@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class IwashiGenerator : MonoBehaviour
+public class HorizonIwashiGenerator : MonoBehaviour
 {
     /// <summary>生成間隔</summary>
     public GeneratData GeneratData;
