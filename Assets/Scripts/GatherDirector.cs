@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class GatherDirector : MonoBehaviour
 {
-    /// <summary>全てのゲームオブジェクト</summary>
-    public GameObject[] AllGameObjects;
+    /// <summary>UIオブジェクトリスト</summary>
+    public GameObject[] UIObjects;
+    /// <summary>いわしジェネレーターリスト</summary>
+    public GameObject[] IwashiGenerators;
+    /// <summary>お邪魔ジェネレーターリスト</summary>
+    public GameObject[] OjamaGenerators;
     /// <summary>スタートカンバスオブジェクト</summary>
     public GameObject GatherStartPanel;
     /// <summary>目標時間</summary>
@@ -31,8 +35,12 @@ public class GatherDirector : MonoBehaviour
     /// </summary>
     private void Initialize()
     {
-        // 全てのゲームオブジェクトを非表示にする
-        WaveDirector.GameObjectsSwtichActive(AllGameObjects, false);
+        // UIオブジェクトを非表示にする
+        WaveDirector.GameObjectsSwtichActive(UIObjects, false);
+
+        // ジェネレーターを非表示にする
+        WaveDirector.GameObjectsSwtichActive(IwashiGenerators, false);
+        WaveDirector.GameObjectsSwtichActive(OjamaGenerators, false);
 
         // 表示
         GatherStartPanel.SetActive(true);
@@ -55,8 +63,12 @@ public class GatherDirector : MonoBehaviour
         // BGM再生
         audioManager.PlayBGM(audioManager.GatherBGM.name);
 
-        // 全てのゲームオブジェクトを表示
-        WaveDirector.GameObjectsSwtichActive(AllGameObjects, true);
+        // UIオブジェクトを表示
+        WaveDirector.GameObjectsSwtichActive(UIObjects, true);
+
+        // 進捗に応じたジェネレーターを表示
+        WaveDirector.GameObjectsPhaseActive(IwashiGenerators);
+        WaveDirector.GameObjectsPhaseActive(OjamaGenerators);
 
         // 非表示
         GatherStartPanel.SetActive(false);
