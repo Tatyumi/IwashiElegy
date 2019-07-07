@@ -45,6 +45,25 @@ public class DuelDirector : MonoBehaviour
             AngryIwashiLists.GetChild(i).gameObject.SetActive(false);
         }
 
+        // 集めたいわしの数を取得
+        var activeIwashiCount = IwashiCountController.IwashiCount / 10;
+
+        // いわしの数が100匹以上か判別
+        if (activeIwashiCount > 100)
+        {
+            // 100匹以上の場合
+
+            // 100を代入する
+            activeIwashiCount = 100;
+        }
+
+        // 捕まえた分だけループ
+        for (int i = 1; i < activeIwashiCount; i++)
+        {
+            // 表示する
+            AngryIwashiLists.GetChild(i).gameObject.SetActive(true);
+        }
+
         // 表示
         DuelStartText.SetActive(true);
     }
