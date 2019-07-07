@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: KurageData
   m_EditorClassIdentifier: 
   KillIwashiCount: 10
-  MoveSpeed: {x: -1, y: 0}
+  MoveSpeed: {x: -3, y: 0}
   MeterDamage: 0.3
