@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da7bfe9c5aa738419450e4871186b92, type: 3}
   m_Name: UpGeneratData
   m_EditorClassIdentifier: 
-  span: 0.3
+  span: 0.2
