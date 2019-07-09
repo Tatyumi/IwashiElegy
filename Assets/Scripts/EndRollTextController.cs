@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Common;
 
 public class EndRollTextController : MonoBehaviour
 {
+    public GameObject[] TotalIwashiText;
     /// <summary>テキストのスクロールスピード</summary>
     private const float textScrollSpeed = 30.0f;
     /// <summary>制限座標</summary>
@@ -65,6 +67,12 @@ public class EndRollTextController : MonoBehaviour
             {
                 // 超えた場合
 
+                // いわし合計値テキストの表示
+                WaveDirector.GameObjectsSwtichActive(TotalIwashiText, true);
+
+                // 捕まえた合計値をテキストに表示する
+                TotalIwashiText[1].GetComponent<Text>().text = IwashiCountController.TotalIwashiCount.ToString();
+
                 // フラグを更新する
                 isEnd = true;
             }
@@ -84,5 +92,8 @@ public class EndRollTextController : MonoBehaviour
 
         // 音楽データ取得
         audioManager = AudioManager.Instance;
+
+        // いわし合計値テキストの非表示
+        WaveDirector.GameObjectsSwtichActive(TotalIwashiText, false);
     }
 }

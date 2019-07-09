@@ -7,6 +7,8 @@ public sealed class IwashiCountController : MonoBehaviour
     public static int IwashiCount;
     /// <summary>いわしポイント</summary>
     public static int iwashiPoint;
+    /// <summary>トータルでいわしを捕まえた数</summary>
+    public static int TotalIwashiCount;
     /// <summary>いわしメーター</summary>
     public GameObject IwashiMeter;
     /// <summary>イワシの数表示テキスト</summary>

@@ -41,6 +41,9 @@ public sealed class TitleDirector : MonoBehaviour
         // 進捗を初期化
         WaveDirector.Phase = 0;
 
+        // いわしを捕まえたトータル数を初期化
+        IwashiCountController.TotalIwashiCount = 0;
+
         // ジングル再生
         audioManager.PlaySE(audioManager.TitleSE.name);
     }
