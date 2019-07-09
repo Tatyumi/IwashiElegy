@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MaguroData
   m_EditorClassIdentifier: 
   KillIwashiCount: 300
-  MoveSpeed: {x: 15, y: 0}
-  MeterDamage: 0.5
+  MoveSpeed: {x: 14, y: 0}
+  MeterDamage: 0.6
