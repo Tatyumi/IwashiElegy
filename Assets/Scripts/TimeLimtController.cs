@@ -70,8 +70,7 @@ public class TimeLimtController : MonoBehaviour
         audioManager = AudioManager.Instance;
 
         // 初期値値代入
-        // TODOステージによって異なる
-        timeLimit = 10.0f;
+        timeLimit = 15.0f * (WaveDirector.Phase + 1);
         isEnd = false;
 
         // 非表示
