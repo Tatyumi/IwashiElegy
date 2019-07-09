@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c53dd2a19b15024d8720b504af0278d, type: 3}
   m_Name: OctopasOjamaData
   m_EditorClassIdentifier: 
-  KillIwashiCount: 30
+  KillIwashiCount: 60
   MoveSpeed: {x: 0, y: 5}
   MeterDamage: 0.4
